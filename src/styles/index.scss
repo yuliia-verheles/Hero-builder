@@ -1,1 +1,23 @@
 @import "nullstyle.scss";
+
+$colorBlack: #000000;
+
+#root {
+    height: 100vh;
+    margin: auto;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    border: 2px dotted $colorBlack;
+    height: 720px;
+    width: 520px;
+}
+
+.inventory {
+    border: 2px solid $colorBlack;
+    height: 720px;
+    width: 520px;
+}
