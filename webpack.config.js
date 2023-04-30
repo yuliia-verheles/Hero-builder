@@ -1,14 +1,16 @@
 const path = require('path')
+const htmlWPPlugin = require('html-webpack-plugin')
 
 module.exports = {
     mode: 'development',
     entry: {
-        filename: path.resolve(__dirname, 'src')
+        bundle: path.resolve(__dirname, 'src')
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'index.js',
-        assetModuleFilename: '[name][ext]'
+        path: path.resolve(__dirname, 'build'),
+        filename: '[name].[contenthash].js',
+        assetModuleFilename: '[name][ext]',
+        clean: true
     },
     devServer: {
         port: 3001,
@@ -35,5 +37,12 @@ module.exports = {
                 type: 'asset/resource'
             }
         ]
-    }
+    },
+    plugins: [
+        new htmlWPPlugin({
+            title: 'Hero builder',
+            filename: 'index.html',
+            template: path.resolve(__dirname, 'index.html'),
+        })
+    ]
 }

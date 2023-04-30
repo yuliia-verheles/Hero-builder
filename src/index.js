@@ -1,4 +1,4 @@
-import './app' 
-import './app/hero' 
-import './app/inventory' 
-import './styles/index.scss'
+import './app';
+import './app/hero';
+import './app/inventory';
+import './styles/index.scss';
