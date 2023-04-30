@@ -17,3 +17,9 @@ console.log(x);
 
 
 var b=4
+
+var obj={
+  name: "kun"
+}
+
+let name= obj.name
