@@ -14,3 +14,6 @@ function foo(name) {
 const x = 200;
 
 console.log(x);
+
+
+var b=4
