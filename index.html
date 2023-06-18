@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script defer src='./src/index.js'></script>
-</head>
-<body>
+    <script defer src="./src/index.js"></script>
+  </head>
+  <body>
     <div id="root">
-        <div class="hero"></div>
-        <div class="inventory"></div>
+      <div class="hero">
+        <div class="character">
+          <div class="item familiar"></div>
+          <div class="item hat"></div>
+          <div class="item mask"></div>
+          <div class="item earrings"></div>
+          <div class="item necklace"></div>
+          <div class="item armor"></div>
+          <div class="item bracers"></div>
+          <div class="item ring"></div>
+          <div class="item greaves"></div>
+          <div class="item shoes"></div>
+          <div class="item weapon"></div>
+        </div>
+        <div class="controls">
+          <button class="equip">Auto Equip</button>
+          <button class="unequip">Auto Unequip</button>
+        </div>
+      </div>
+      <div class="characteristics"></div>
+      <div class="inventory">
+        <div class="storage"></div>
+        <div class="inventoryNav">
+          <button class="class"><<</button>
+          <button class="class"><</button>
+          <button class="class">></button>
+          <button class="class">>></button>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

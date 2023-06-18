@@ -1,25 +1,34 @@
-// import img1 from '../assets/1.jpg'
+import render from './render';
 
-// document.querySelector('#root').innerHTML = `
-//     <h1>Hello Piska</h1>
-//     <img src="${img1}">
-// `
+render();
 
-const a = 1;
+// const draggableImages = document.querySelectorAll('.inventory .storage img');
+// const storage = document.querySelector('.inventory .storage');
+// // const droppableArea = document.querySelectorAll('.hero .character .item');
 
-function foo(name) {
-  const lastname = name;
-}
+// console.log(draggableImages);
 
-const x = 200;
+// const onDragStart = (event) => {
+//   console.log(event.target);
+//   equipment(id)
+// };
 
-console.log(x);
+// storage.addEventListener('dragstart', (event) => {
+//   if (event.target.tagName !== 'IMG') return;
+//   onDragStart(event);
+// });
 
+// Array.from(draggableImages).map((el) => el.addEventListener('dragstart', onDragStart));
+// droppableArea.addEventListener('dragover', dragOver);
+// droppableArea.addEventListener('drop', drop);
 
-var b=4
+// equip(id) => {
+//   smotka = StorageManager.find(id)
+//   if Heroooo[smotka.type] {
+//     unEquip(Heroooo[smotka.type].id)
+//   }
 
-var obj={
-  name: "kun"
-}
-
-let name= obj.name
+//   Herro[smotka.type] = smotka.id
+//   smotka.status = !smotka.status
+//   rerenderApp();
+// }

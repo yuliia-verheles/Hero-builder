@@ -2,22 +2,204 @@
 
 $colorBlack: #000000;
 
+@mixin fontz($f, $c) {
+    font-size: $f;
+    color: $c;
+}
+
 #root {
     height: 100vh;
     margin: auto;
-    display: flex;    
+    display: flex;
     justify-content: center;
     align-items: center;
+
+    background: no-repeat linear-gradient(to bottom, rgb(255, 137, 3, 0.3), rgba(59, 59, 180, 0.4)), url('../assets/bg-image.jpg');
+    background-size: cover;
+    // filter: blur(4px);
+    // -webkit-filter: blur(4px);
+
+    overflow: auto;
+
 }
 
 .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    padding: 24px;
+    gap: 24px;
+
+    min-height: 720px;
+    min-width: 520px;
     border: 2px dotted $colorBlack;
-    height: 720px;
-    width: 520px;
+
+    .character {
+        position: relative;
+
+        height: 540px;
+        width: 100%;
+        border: 3px solid $colorBlack;
+
+        background-image: url('../assets/hero.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+
+        .item {
+            position: absolute;
+            border: 3px solid $colorBlack;
+            height: 50px;
+            width: 50px;
+        }
+
+        .familiar {
+            left: 80%;
+            top: 5%;
+        }
+
+        .hat {
+            left: 33%;
+            top: 3%;
+        }
+
+        .mask {
+            left: 55%;
+            top: 7%;
+        }
+
+        .earrings {
+            left: 35%;
+            top: 13%;
+        }
+
+        .necklace {
+            left: 45%;
+            top: 17%;
+        }
+
+        .armor {
+            left: 45%;
+            top: 27%;
+        }
+
+        .bracers {
+            left: 28%;
+            top: 35%;
+        }
+
+        .ring {
+            left: 60%;
+            top: 40%;
+        }
+
+        .greaves {
+            left: 40%;
+            top: 60%;
+        }
+
+        .shoes {
+            left: 42%;
+            top: 83%;
+        }
+
+        .weapon {
+            left: 35%;
+            top: 50%;
+        }
+
+    }
+
+    .controls {
+        button {
+            border: 1px solid $colorBlack;
+            border-radius: 50%;
+            height: 50px;
+            width: 100px;
+            margin: 10px;
+            color: antiquewhite;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        .equip {
+            background-color: #ffc403;
+        }
+
+        .unequip {
+            background-color: #3353bb;
+        }
+    }
+}
+
+.characteristics {
+    border: 2px dashed $colorBlack;
+    height: 280px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        @include fontz(24px, rgb(128, 21, 83));
+        margin: 5px;
+        padding: 10px;
+    }
 }
 
 .inventory {
-    border: 2px solid $colorBlack;
+    border: 24px solid;
+
+    border-image: url(../assets/frame2.jpg) 106 stretch;
+
     height: 720px;
     width: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .storage {
+        border: 4px solid $colorBlack;
+        height: 520px;
+        width: 440px;
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        justify-items: center;
+        justify-content: space-evenly;
+        align-content: baseline;
+        gap: 10px;
+
+        img {
+            height: 74px;
+            width: 74px;
+            padding: 5px;
+
+            cursor: grab;
+        }
+    }
+
+    .inventoryNav {
+        border: 3px solid $colorBlack;
+        height: 80px;
+        width: 440px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        button {
+            height: 40px;
+            width: 40px;
+            background-color: #a8601b;
+            color: aliceblue;
+        }
+    }
 }

@@ -1,0 +1,167 @@
+[
+    {
+        "id": 0,
+        "name": "Foxy",
+        "type": "familiar",
+        "class": "ordinary",
+        "svg": "fox.svg",
+        "color": "white",
+        "gearAttributes": {
+            "HP": 10,
+            "Defense": 10,
+            "ATK": 10,
+            "Crit Rate": 10
+        },
+        "isEquiped": true
+    },
+    {
+        "id": 1,
+        "name": "Crown of thorns",
+        "type": "hat",
+        "class": "ordinary",
+        "svg": "crown-of-thorns.svg",
+        "color": "white",
+        "gearAttributes": {
+            "HP": 100,
+            "Defense": 10,
+            "ATK": 0,
+            "Crit Rate": 15
+        },
+        "isEquiped": false
+    },
+    {
+        "id": 2,
+        "name": "Steampunk goggles",
+        "type": "mask",
+        "class": "ordinary",
+        "svg": "steampunk-goggles.svg",
+        "color": "white",
+        "gearAttributes": {
+            "HP": 50,
+            "Defense": 0,
+            "ATK": 0,
+            "Crit Rate": 5
+        },
+        "isEquiped": false
+    },
+    {
+        "id": 3,
+        "name": "Crystal earrings",
+        "type": "earrings",
+        "class": "ordinary",
+        "svg": "crystal-earrings.svg",
+        "color": "white",
+        "gearAttributes": {
+            "HP": 100,
+            "Defense": 100,
+            "ATK": 0,
+            "Crit Rate": 0
+        },
+        "isEquiped": false
+    },
+    {
+        "id": 4,
+        "name": "Pendant key",
+        "type": "necklace",
+        "class": "ordinary",
+        "svg": "pendant-key.svg",
+        "color": "white",
+        "gearAttributes": {
+            "HP": 100,
+            "Defense": 100,
+            "ATK": 0,
+            "Crit Rate": 0
+        },
+        "isEquiped": true
+    },
+    {
+        "id": 5,
+        "name": "Hoodie",
+        "type": "armor",
+        "class": "ordinary",
+        "svg": "hoodie.svg",
+        "color": "white",
+        "gearAttributes": {
+            "HP": 1,
+            "Defense": 10,
+            "ATK": 0,
+            "Crit Rate": 0
+        },
+        "isEquiped": false
+    },
+    {
+        "id": 6,
+        "name": "Gloves",
+        "type": "bracers",
+        "class": "ordinary",
+        "svg": "gloves.svg",
+        "color": "white",
+        "gearAttributes": {
+            "HP": 50,
+            "Defense": 50,
+            "ATK": 50,
+            "Crit Rate": 10
+        },
+        "isEquiped": false
+    },
+    {
+        "id": 7,
+        "name": "Power ring",
+        "type": "ring",
+        "class": "ordinary",
+        "svg": "power-ring.svg",
+        "color": "white",
+        "gearAttributes": {
+            "HP": 50,
+            "Defense": 45,
+            "ATK": 100,
+            "Crit Rate": 50
+        },
+        "isEquiped": false
+    },
+    {
+        "id": 8,
+        "name": "Skirt",
+        "type": "greaves",
+        "class": "ordinary",
+        "svg": "skirt.svg",
+        "color": "white",
+        "gearAttributes": {
+            "HP": 45,
+            "Defense": 15,
+            "ATK": 0,
+            "Crit Rate": 0
+        },
+        "isEquiped": true
+    },
+    {
+        "id": 9,
+        "name": "Bunny slippers",
+        "type": "shoes",
+        "class": "ordinary",
+        "svg": "bunny-slippers.svg",
+        "color": "white",
+        "gearAttributes": {
+            "HP": 200,
+            "Defense": 200,
+            "ATK": 100,
+            "Crit Rate": 100
+        },
+        "isEquiped": false
+    },
+    {
+        "id": 10,
+        "name": "Kusarigama",
+        "type": "weapon",
+        "class": "ordinary",
+        "svg": "kusarigama.svg",
+        "color": "white",
+        "gearAttributes": {
+            "HP": 500,
+            "Defense": 0,
+            "ATK": 200,
+            "Crit Rate": 300
+        },
+        "isEquiped": false
+    }
+]

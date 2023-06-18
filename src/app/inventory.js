@@ -1,6 +1,3 @@
-const inventory = document.querySelector('.inventory');
+import data from '../../data.json'; // assert { type: 'json' };
 
-const div = document.createElement('div');
-div.className = 'inventory';
-
-root.append(div);
+export default JSON.parse(JSON.stringify(data));
