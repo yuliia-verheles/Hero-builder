@@ -10,7 +10,8 @@
         "no-plusplus":"off",
         "no-unused-vars": "error",
         "linebreak-style": ["error", "windows"],
-        "no-param-reassign": "off"
+        "no-param-reassign": "off",
+        "no-unused-expressions": ["error", { "allowShortCircuit": true }]
     }, 
     "parserOptions": {
         "ecmaVersion": 2023

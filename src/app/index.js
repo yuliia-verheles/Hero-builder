@@ -1,6 +1,20 @@
+import {
+  // eslint-disable-next-line no-unused-vars
+  autoEquip, equip, unequip, unequipAll,
+} from './equip';
 import render from './render';
 
-render();
+render();// render(); render(); render();
+
+document.querySelector('.equip').addEventListener('click', autoEquip);
+document.querySelector('.unequip').addEventListener('click', unequipAll);
+
+// equip(11);
+// unequip();
+// autoEquip();
+// unequipAll();
+
+// autoEquip();
 
 // const draggableImages = document.querySelectorAll('.inventory .storage img');
 // const storage = document.querySelector('.inventory .storage');

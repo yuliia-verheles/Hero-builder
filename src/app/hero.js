@@ -1,6 +1,6 @@
 export default {
   id: 0,
-  name: 'hero1',
+  name: 'super HERO',
   equipment: {
     familiar: 0,
     hat: null,
