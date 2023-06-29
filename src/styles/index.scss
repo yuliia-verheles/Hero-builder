@@ -23,6 +23,18 @@ $colorBlack: #000000;
 
 }
 
+.tooltip {
+    position: fixed;
+    z-index: 1;
+    padding: 10px;
+    border: 1px solid #fffb04;
+    border-radius: 4px;
+    text-align: center;
+    color: #2c1603;
+    background: #924316;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+}
+
 .hero {
     display: flex;
     justify-content: center;
@@ -30,19 +42,25 @@ $colorBlack: #000000;
     flex-direction: column;
     flex-wrap: wrap;
 
+    background-color: #d163237e;
+    border-radius: 10px;
+
     padding: 24px;
     gap: 24px;
 
     min-height: 720px;
     min-width: 520px;
-    border: 2px dotted $colorBlack;
+    //border: 2px dotted $colorBlack;
 
     .character {
         position: relative;
 
         height: 540px;
         width: 100%;
-        border: 3px solid $colorBlack;
+        //border: 3px solid $colorBlack;
+
+        background-color: #8d441a7e;
+        border-radius: 10px;
 
         background-image: url('../assets/hero.jpg');
         background-size: contain;
@@ -115,8 +133,7 @@ $colorBlack: #000000;
 
     .controls {
         button {
-            border: 1px solid $colorBlack;
-            border-radius: 50%;
+            border-radius: 10%;
             height: 50px;
             width: 100px;
             margin: 10px;
@@ -128,17 +145,17 @@ $colorBlack: #000000;
         }
 
         .equip {
-            background-color: #ffc403;
+            background-color: #c79a07;
         }
 
         .unequip {
-            background-color: #3353bb;
+            background-color: #263a7e;
         }
     }
 }
 
 .characteristics {
-    border: 2px dashed $colorBlack;
+    //border: 2px dashed $colorBlack;
     height: 280px;
     width: 280px;
     display: flex;
@@ -146,8 +163,14 @@ $colorBlack: #000000;
     justify-content: center;
     align-items: center;
 
+    background-image: url('../assets/scroll.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
     p {
-        @include fontz(24px, rgb(128, 21, 83));
+        @include fontz(24px, rgb(128, 26, 85));
+        text-shadow: 2px 2px #d87111;
         margin: 5px;
         padding: 10px;
     }
@@ -165,8 +188,11 @@ $colorBlack: #000000;
     justify-content: space-evenly;
     align-items: center;
 
+    background-color: #d163237e;
+    border-radius: 10px;
+
     .storage {
-        border: 4px solid $colorBlack;
+        //border: 4px solid $colorBlack;
         height: 520px;
         width: 440px;
 
@@ -178,6 +204,9 @@ $colorBlack: #000000;
         align-content: baseline;
         gap: 10px;
 
+        background-color: #8d441a7e;
+        border-radius: 10px;
+
         img {
             height: 74px;
             width: 74px;
@@ -187,18 +216,22 @@ $colorBlack: #000000;
     }
 
     .inventoryNav {
-        border: 3px solid $colorBlack;
+        //border: 3px solid $colorBlack;
         height: 80px;
         width: 440px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
 
+        background-color: #8d441a7e;
+        border-radius: 10px;
+
         button {
             height: 40px;
             width: 40px;
             background-color: #a8601b;
             color: aliceblue;
+            border-radius: 10%;
         }
     }
 }

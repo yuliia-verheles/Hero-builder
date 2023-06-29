@@ -2,6 +2,22 @@ import inventory from './inventory';
 import hero from './hero';
 import { getColor } from './helper';
 
+const onHoverItem = (event) => {
+  const item = document.querySelector(`[data-id="${event.target.dataset.id}"]`);
+  const tooltipElem = document.createElement('div');
+  tooltipElem.className = 'tooltip';
+  tooltipElem.innerHTML = event.target.dataset.tooltip;
+  tooltipElem.style.left = `${event.clientX}px`;
+  tooltipElem.style.top = `${event.clientY}px`;
+
+  item.after(tooltipElem);
+};
+
+const onHoverItemLeave = () => {
+  const tooltipElem = document.querySelector('.tooltip');
+  if (tooltipElem) tooltipElem.remove();
+};
+
 export const applyCharacteristics = () => {
   const characteristics = {
     HP: 0,
@@ -48,6 +64,10 @@ export const fillStorage = () => {
     img.setAttribute('draggable', true);
     img.style.border = `4px solid ${getColor(item.class)}`;
     img.dataset.id = item?.id;
+    img.dataset.tooltip = Object.entries(item.gearAttributes).map(([key, value]) => `${key}: ${value}<br>`).join('');
+
+    img.addEventListener('mouseenter', onHoverItem);
+    img.addEventListener('mouseout', onHoverItemLeave);
 
     storage.appendChild(img);
   });
@@ -68,6 +88,10 @@ export const fillHero = () => {
     img.setAttribute('draggable', true);
     img.style.border = `2px solid ${getColor(item.class)}`;
     img.dataset.id = hero.equipment[slot.classList[1]];
+    img.dataset.tooltip = Object.entries(item.gearAttributes).map(([key, value]) => `${key}: ${value}<br>`).join('');
+
+    img.addEventListener('mouseenter', onHoverItem);
+    img.addEventListener('mouseout', onHoverItemLeave);
 
     slot.appendChild(img);
   });
