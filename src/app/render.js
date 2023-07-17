@@ -1,6 +1,8 @@
-import inventory from './inventory';
+import {
+  inventory, getItems, IPP, page,
+} from './inventory';
 import hero from './hero';
-import { getColor } from './helper';
+import { getColor, paginate } from './helper';
 
 const onHoverItem = (event) => {
   const item = document.querySelector(`[data-id="${event.target.dataset.id}"]`);
@@ -55,9 +57,9 @@ export const fillStorage = () => {
     storage.removeChild(storage.firstChild);
   }
 
-  inventory.forEach((item) => {
-    if (item.isEquiped) return;
+  const paginatedItems = paginate(page, IPP, getItems());
 
+  paginatedItems.forEach((item) => {
     const img = document.createElement('img');
 
     img.setAttribute('src', `../src/assets/${item.svg}`);

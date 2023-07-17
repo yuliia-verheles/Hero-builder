@@ -2,12 +2,18 @@ import {
   // eslint-disable-next-line no-unused-vars
   autoEquip, equip, unequip, unequipAll,
 } from './equip';
-import render from './render';
+import render, { fillStorage } from './render';
+import { TOTAL_PAGES, page, updatePage } from './inventory';
 
-render();// render(); render(); render();
+render();
 
 document.querySelector('.equip').addEventListener('click', autoEquip);
 document.querySelector('.unequip').addEventListener('click', unequipAll);
+
+document.querySelector('.inventoryNav .start').addEventListener('click', () => { updatePage(1); fillStorage(); });
+document.querySelector('.inventoryNav .previous').addEventListener('click', () => { updatePage(page - 1); fillStorage(); });
+document.querySelector('.inventoryNav .next').addEventListener('click', () => { updatePage(page + 1); fillStorage(); });
+document.querySelector('.inventoryNav .end').addEventListener('click', () => { updatePage(TOTAL_PAGES); fillStorage(); });
 
 // equip(11);
 // unequip();
