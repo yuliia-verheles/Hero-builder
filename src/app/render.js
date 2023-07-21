@@ -1,5 +1,5 @@
 import {
-  inventory, getItems, IPP, page,
+  inventory, getItems, IPP, page, navBtnStates,
 } from './inventory';
 import hero from './hero';
 import { getColor, paginate } from './helper';
@@ -73,6 +73,8 @@ export const fillStorage = () => {
 
     storage.appendChild(img);
   });
+
+  navBtnStates();
 };
 
 export const fillHero = () => {

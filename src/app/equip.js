@@ -1,4 +1,4 @@
-import inventory from './inventory';
+import { inventory } from './inventory';
 import hero from './hero';
 import render from './render';
 import { estimateItem } from './helper';
